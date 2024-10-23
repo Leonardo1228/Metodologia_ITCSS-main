@@ -109,8 +109,8 @@ main {
     font-size: 0.9rem;
 }
 .object{
-    width: 120;
-    height: 120%;
+    width: 110;
+    height: 110%;
 object-fit: contain;
 }
 
