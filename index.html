@@ -64,6 +64,7 @@
                     </pre>
                 </div>
             </section>
+                        <!-- Estructura-->
          <section class="content__section flex-item">
             <h2 class="section__title">Apliacion</h2>
             <p class="section__text">
@@ -71,6 +72,80 @@
                 Así, las capas superiores afectan a las inferiores, pero nunca al revés. Las capas inferiores heredarán los estilos de sus superiores.
             </p>
             <img class="object flex-item" src="https://lh5.googleusercontent.com/444COS9a2NkcThrLfpZ1kPQIrNmpx45qKBDTTkuoe1zMv_ARAc7nOpfmLVMHQvHYa_9qrXEU4E1imJLOO2FhoVWFFowURADr6dsj6vc717Aqm_RvVRgeCEIZG4xTW04_itnj5pD9">
+            <h1 class="section__title">Configuración</h1>
+            <p class="section__text">
+                Aquí es donde se definen las variables cuando se utiliza un preprocesador. No genera CSS.
+            </p>
+            <p class="section__text">
+                $main-color: #6834cb
+            </p>
+            <h1 class="section__title">Herramientas</h1>
+            <p class="section__text">
+                Si se utiliza preprocesador, en esta capa se definen funciones y mixins. Al igual que la anterior, no genera CSS.
+            </p>
+            <p class="section__text">
+                @función suma($números...) {
+                    $suma: 0;
+                    @cada $número en $números {
+                      $suma: $suma + $número;
+                    }
+                    @devuelve $suma;
+                  }
+            </p>
+            <h1 class="section__title">Genérico</h1>
+            <p class="section__text">
+                Se refiere al código genérico, aquel que sirve para resetear o normalizar los estilos base de los navegadores. 
+                Por ejemplo un reset css o un normalize irían aquí.
+            </p>
+            <p class="section__text">
+                * {
+                    padding: 0;
+                    margin: 0;
+                  }
+            </p>
+            <h1 class="section__title">Elementos</h1>
+            <p class="section__text">
+                Reglas que afectan a las etiquetas HTML.
+            </p>
+            <p class="section__text">
+                h1 {
+                    color: $color-principal;
+                    font-size: 24px;
+                  }
+            </p>
+            <h1 class="section__title">Objetos</h1>
+            <p class="section__text">
+                Objetos, es decir, aquellas clases genéricas que son reutilizables en todo el proyecto. Por ejemplo el contenedor.
+            </p>
+            <p class="section__text">
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                  }
+            </p>
+            <h1 class="section__title">Componentes</h1>
+            <p class="section__text">
+                Los componentes, a diferencia de los objetos, son partes específicas de la interfaz. 
+                Un ejemplo de componente sería una barra de búsqueda o la cabecera de nuestra aplicación. 
+                Los estilos que definamos para un componente sólo afectarán a ese componente.
+            </p>
+            <p class="section__text">
+                .search-bar {
+                    color de fondo: $perla;
+                    color: $gris claro;
+                    font-size: 22px;
+                  }
+            </p>
+            <h1 class="section__title">Triunfos</h1>
+            <p class="section__text">
+                Esta capa, también llamada Utilidades, engloba todas aquellas reglas que anulan cualquier otra regla definida en las capas anteriores. 
+                Es la única capa en la que se permite !important. Un ejemplo sería tener una clase que nos permita ocultar elementos mediante un display: none.
+            </p>
+            <p class="section__text">
+                .d-none {
+                    display: none!important;
+                  }
+            </p>
          </section>    
         </div>
     </main>
