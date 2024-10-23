@@ -108,7 +108,9 @@ main {
 .footer__text {
     font-size: 0.9rem;
 }
-
+.object{
+object-fit: contain;
+}
 
 
 
